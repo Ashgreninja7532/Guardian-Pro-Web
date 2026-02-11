@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guardian Pro | Ultimate App Security</title>
+    
+    <!-- FAVICON (Your App Logo) -->
+    <link rel="icon" type="image/png" href="logo.png">
+
     <link rel="stylesheet" href="style.css">
+    
     <!-- Montserrat Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons (Modern Icon Pack) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- NAVBAR -->
     <nav class="glass">
         <div class="logo">
-            <i class="fas fa-shield-alt"></i> Guardian Pro
+            <!-- Small logo in navbar -->
+            <img src="logo.png" alt="Logo" style="height: 24px; vertical-align: middle; margin-right: 8px;">
+            Guardian Pro
         </div>
         <div class="links">
             <a href="#features">Features</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="privacy.html">Privacy</a>
             <a href="#contact">Support</a>
         </div>
     </nav>
@@ -29,57 +37,73 @@
     <!-- HERO SECTION -->
     <header>
         <div class="hero-content">
+            <div class="version-badge">
+                <i class="ri-rocket-2-fill"></i> Version 1.0.0
+            </div>
+            
             <h1>SECURE YOUR <br><span class="glow-text">DIGITAL LIFE</span></h1>
-            <p>Advanced App Locking utility with Intruder Detection and Biometric Security.</p>
-            <a href="#" class="btn-download">
-                <i class="fas fa-download"></i> Download on Indus App Store
-            </a>
+            <p>The ultimate privacy tool. Lock apps, detect intruders, and secure your device with military-grade encryption.</p>
+            
+            <div class="cta-buttons">
+                <!-- LINK 1: INDUS APP STORE -->
+                <!-- Replace '#' with your actual Indus App Store URL when you have it -->
+                <a href="#" target="_blank" class="btn-primary">
+                    <i class="ri-store-3-fill"></i> Indus App Store
+                </a>
+                
+                <!-- LINK 2: DIRECT APK DOWNLOAD -->
+                <!-- Ensure you uploaded 'guardian-pro.apk' to your repo -->
+                <a href="guardian-pro.apk" class="btn-secondary" download>
+                    <i class="ri-android-fill"></i> Direct APK
+                </a>
+            </div>
+            <p class="sub-text">Requires Android 9.0+</p>
         </div>
+        
         <div class="hero-image">
-            <!-- Replace 'app_mockup.png' with a screenshot of your app -->
             <div class="phone-mockup glass">
-                <i class="fas fa-lock fa-3x"></i>
+                <i class="ri-shield-keyhole-line" style="font-size: 5rem;"></i>
             </div>
         </div>
     </header>
 
     <!-- FEATURES GRID -->
     <section id="features">
-        <h2>Core Features</h2>
+        <h2>Next-Gen Security</h2>
         <div class="grid">
             <div class="card glass">
-                <i class="fas fa-fingerprint"></i>
-                <h3>Biometric Unlock</h3>
-                <p>Seamlessly unlock apps using your fingerprint or Face ID.</p>
+                <i class="ri-fingerprint-2-line icon-glow"></i>
+                <h3>Biometric ID</h3>
+                <p>Unlock instantly with Fingerprint or Face recognition.</p>
             </div>
             <div class="card glass">
-                <i class="fas fa-camera"></i>
+                <i class="ri-camera-lens-line icon-glow"></i>
                 <h3>Intruder Selfie</h3>
-                <p>Automatically captures a photo of anyone trying to break into your apps.</p>
+                <p>Catches unauthorized access attempts with a silent photo.</p>
             </div>
             <div class="card glass">
-                <i class="fas fa-shield-virus"></i>
-                <h3>Uninstall Protection</h3>
-                <p>Prevents unauthorized removal of the app without your Master PIN.</p>
+                <i class="ri-uninstall-line icon-glow"></i>
+                <h3>Anti-Uninstall</h3>
+                <p>Prevents the app from being removed without your PIN.</p>
             </div>
             <div class="card glass">
-                <i class="fas fa-clock"></i>
+                <i class="ri-timer-flash-line icon-glow"></i>
                 <h3>Smart Re-Lock</h3>
-                <p>Customizable delay settings: Instant, 10s, or until screen off.</p>
+                <p>Set custom delays: Instant, 10s, or until screen off.</p>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT / FOOTER -->
+    <!-- FOOTER -->
     <footer id="contact">
         <div class="footer-content">
             <h3>Support</h3>
-            <p>Need help? Contact our security team.</p>
+            <p>Need assistance? We are here to help.</p>
             <a href="mailto:support@guardianpro.com" class="email-link">support@guardianpro.com</a>
             
             <div class="legal">
                 <a href="privacy.html">Privacy Policy</a>
-                <span>&copy; 2025 Guardian Pro Security.</span>
+                <span>&copy; 2025 Guardian Pro. All rights reserved.</span>
             </div>
         </div>
     </footer>
