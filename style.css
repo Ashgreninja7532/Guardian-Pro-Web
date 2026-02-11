@@ -58,97 +58,122 @@ nav {
 
 /* HERO SECTION */
 header {
-    min-height: 100vh;
+    min-height: 100vh; /* Full Height */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 10% 50px;
-    text-align: center;
-    background: radial-gradient(circle at 50% 30%, #1a1a1a 0%, #080808 60%);
+    flex-direction: column; /* Force vertical stacking */
+    align-items: center; /* Horizontally Center */
+    justify-content: center; /* Vertically Center */
+    padding: 120px 20px;
+    text-align: center; /* Ensure text inside is centered */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #080808 70%);
 }
 
 .hero-content {
-    max-width: 600px;
-    z-index: 10;
+    width: 100%;
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Safety centering */
 }
 
 /* Version Badge */
 .version-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #b0b0b0;
-    margin-bottom: 20px;
+    color: #e0e0e0;
+    margin-bottom: 24px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+.version-badge i { color: #34C759; } /* Green Check icon */
 
 h1 { 
-    font-size: 4rem; 
+    font-size: 3.5rem; 
     line-height: 1.1; 
     margin-bottom: 20px; 
     font-weight: 800;
 }
 .glow-text { 
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2); 
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.25); 
 }
 
 header p { 
     opacity: 0.7; 
-    margin-bottom: 40px; 
+    margin-bottom: 50px; 
     font-size: 1.1rem; 
     line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* BUTTONS */
+/* NEW BUTTON STYLE (Box) */
 .cta-buttons {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     justify-content: center;
-    margin-bottom: 16px;
+    align-items: center;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
-.btn-primary {
-    background: #FFFFFF;
-    color: #000000;
-    padding: 16px 32px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: 0.3s;
+.btn-box {
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-.btn-primary:hover { 
-    transform: translateY(-2px); 
-    box-shadow: 0 0 20px rgba(255,255,255,0.3); 
+    gap: 12px;
+    padding: 16px 28px;
+    border-radius: 16px;
+    text-align: left;
+    transition: 0.3s;
+    min-width: 280px; /* Uniform width */
 }
 
-.btn-secondary {
-    background: rgba(255,255,255,0.05);
-    color: #FFFFFF;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 16px 32px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.btn-box i {
+    font-size: 1.8rem;
 }
-.btn-secondary:hover { 
-    background: rgba(255,255,255,0.1); 
+
+.btn-box span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+}
+
+.btn-box strong {
+    font-size: 1rem;
+    font-weight: 800;
+    display: block;
+}
+
+/* 1. White Filled Box */
+.btn-box.white {
+    background: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+.btn-box.white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+}
+
+/* 2. Glass/Border Box */
+.btn-box.glass-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-box.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
     border-color: #FFFFFF;
 }
 
 .sub-text {
     font-size: 0.8rem;
     opacity: 0.4;
+    margin-top: 20px;
 }
 
 /* FEATURES GRID */
@@ -171,8 +196,6 @@ header p {
     border-radius: 20px;
     text-align: left;
     transition: 0.4s;
-    position: relative;
-    overflow: hidden;
 }
 
 .card:hover { 
@@ -186,9 +209,7 @@ header p {
     color: #FFFFFF; 
     display: inline-block;
 }
-.icon-glow {
-    text-shadow: 0 0 15px rgba(255,255,255,0.4);
-}
+.icon-glow { text-shadow: 0 0 15px rgba(255,255,255,0.4); }
 
 .card h3 { margin-bottom: 10px; font-size: 1.2rem; }
 .card p { font-size: 0.95rem; opacity: 0.6; line-height: 1.6; }
@@ -226,16 +247,6 @@ footer {
         background: rgba(8, 8, 8, 0.95);
     }
     h1 { font-size: 2.8rem; }
-    header { 
-        padding-top: 120px; 
-        flex-direction: column; 
-    }
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        justify-content: center;
-    }
+    header { padding-top: 120px; }
+    .btn-box { width: 100%; justify-content: center; }
 }
