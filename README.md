@@ -3,7 +3,7 @@
 This is the official landing page and privacy policy host for **Guardian Pro**, an advanced Android security application.
 
 ## 🔗 Live Site
-[Click here to view the Website & Privacy Policy](https://Ashgreninja7532.github.io/guardian-pro-web/)
+[Click here to view the Website & Privacy Policy]https://ashgreninja7532.github.io/Guardian-Pro-Web/
 
 ## 📱 App Features
 *   **Biometric Lock:** Fingerprint & Face ID support.
